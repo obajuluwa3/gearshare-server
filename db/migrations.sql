@@ -1,8 +1,8 @@
 -- psql -a -f migrations.sql
 
-CREATE DATABASE equipment_rental;
+-- CREATE DATABASE equipment_rental;
 
-\c equipment_rental;
+-- \c equipment_rental;
 
 CREATE TABLE users (id SERIAL PRIMARY KEY,
 					first_name VARCHAR,
