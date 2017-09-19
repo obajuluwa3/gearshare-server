@@ -35,3 +35,5 @@ CREATE TABLE rentals (id SERIAL PRIMARY KEY,
 					cost NUMERIC(9,2),
 					user_id INTEGER REFERENCES users(id),
 					equipment_id INTEGER REFERENCES equipments(id));
+
+INSERT INTO users (first_name, last_name, email, username, password, address, city, state, zip, token) VALUES ('test', 'test', 'test', 'test', 'test', 'test', 'test', 'IN', 46410);
