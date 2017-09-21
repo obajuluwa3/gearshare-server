@@ -1,4 +1,4 @@
-require 'SecureRandom'
+require 'securerandom'
 
 class UserController < ApplicationController
   
@@ -45,7 +45,7 @@ class UserController < ApplicationController
     user.city = request_body["city"]
     user.state = request_body["state"]
     user.zip = request_body["zip"]
-    user.token = SecureRandom.hex
+    user.token = securerandom.hex
     user.save
     user.to_json
   end
