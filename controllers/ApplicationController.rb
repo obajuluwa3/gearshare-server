@@ -16,8 +16,10 @@ class ApplicationController < Sinatra::Base
 		token = params[:token]
 		user = User.find_by(token: token)
 		if user
+			puts '---------------im a user'
 			pass
 		else
+			puts '--------------------no'
 			'noooo'
 		end
 	end
