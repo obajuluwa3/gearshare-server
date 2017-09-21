@@ -7,7 +7,6 @@ class ApplicationController < Sinatra::Base
 	end
 
 	before do
-		p '-------------something--------------'
 		response['Access-Control-Allow-Origin'] = '*'
     	content_type :json
 		path = request.fullpath.split("?")[0]
@@ -17,11 +16,9 @@ class ApplicationController < Sinatra::Base
 		token = params[:token]
 		user = User.find_by(token: token)
 		if user
-			puts '---------------im a user'
 			pass
 		else
-			puts '--------------------no'
-			'noooo'
+			halt 403
 		end
 	end
 end
