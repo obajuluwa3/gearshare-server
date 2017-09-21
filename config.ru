@@ -30,7 +30,7 @@ else
   	)
 end
 
-map('/'){run ApplicationController}
+
 map('/equipments'){run EquipmentController}
 map('/users'){run UserController}
 map('/rentals'){run RentalController}

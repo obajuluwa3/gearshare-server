@@ -7,6 +7,7 @@ class ApplicationController < Sinatra::Base
 	end
 
 	before do
+		p '-------------something--------------'
 		response['Access-Control-Allow-Origin'] = '*'
     	content_type :json
 		path = request.fullpath.split("?")[0]
