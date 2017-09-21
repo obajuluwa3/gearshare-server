@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
 		if user
 			pass
 		else
-			halt 403
+			'noooo'
 		end
 	end
 end
